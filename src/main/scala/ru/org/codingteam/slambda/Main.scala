@@ -8,6 +8,7 @@ object Main extends App {
 
   val and = Lambda('b', Lambda('c', Application(Application(Variable('b'), Variable('c')), fls)))
 
+  println(Full.eval(Application(Application(tru, Variable('a')), Variable('b'))))
   println(CallByName.eval(Application(Application(and, tru), tru)))
   println(CallByName.eval(Application(Application(and, tru), tru)) == tru)
 }
