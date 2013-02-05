@@ -18,4 +18,7 @@ object Main extends App {
       Lambda('z', Application(id, Variable('z')))))
   println("Call by name:")
   println(CallByName.eval(test))
+
+  println("Call by value:")
+  println(CallByValue.eval(test))
 }
